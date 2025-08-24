@@ -1,4 +1,2 @@
 #!/bin/bash
-: "${CFILE:?CFILE is not set}"
-OBJ="${CFILE%.c}.o"
-gcc -c "$CFILE" -o "$OBJ"
+gcc -c "$CFILE" -o "${CFILE%.c}.o"
