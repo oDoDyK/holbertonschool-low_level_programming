@@ -1,4 +1,2 @@
 #!/bin/bash
-# Generate Intel-syntax assembly from the C source in $CFILE
-# Output file: same basename, but with .s extension
 gcc -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
