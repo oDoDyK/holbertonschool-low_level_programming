@@ -1,43 +1,49 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_times_table - prints the n times table, starting with 0
- * @n: the value of the multiplication table
+ * @n: the number of the times table to print
  *
- * Description: If n is greater than 15 or less than 0, the function
- * does nothing. Numbers are separated by commas and spaces and
- * properly aligned.
+ * Description: Prints the times table for n.
+ * If n is greater than 15 or less than 0, nothing is printed.
  */
 void print_times_table(int n)
 {
-	int i, j, prod;
+	int row, col, result;
 
 	if (n < 0 || n > 15)
 		return;
 
-	for (i = 0; i <= n; i++)
+	for (row = 0; row <= n; row++)
 	{
-		for (j = 0; j <= n; j++)
+		for (col = 0; col <= n; col++)
 		{
-			prod = i * j;
-			if (j != 0)
+			result = row * col;
+
+			if (col != 0)
 			{
-				if (prod < 10)
-					printf("   %d", prod);
-				else if (prod < 100)
-					printf("  %d", prod);
-				else
-					printf(" %d", prod);
-			}
-			else
-			{
-				printf("%d", prod);
+				_putchar(',');
+				_putchar(' ');
+				if (result < 10)
+					_putchar(' ');
+				if (result < 100)
+					_putchar(' ');
 			}
 
-			if (j != n)
-				printf(",");
+			if (result >= 100)
+			{
+				_putchar((result / 100) + '0');
+				_putchar(((result / 10) % 10) + '0');
+				_putchar((result % 10) + '0');
+			}
+			else if (result >= 10)
+			{
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
+			}
+			else
+				_putchar(result + '0');
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
