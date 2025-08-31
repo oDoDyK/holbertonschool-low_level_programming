@@ -4,43 +4,42 @@
 /* Standard library inclusion for printf */
 #include <stdio.h>
 
-/* 0. 98 Battery st. */
+/* Function prototypes */
+
+/* 0-reset_to_98.c */
 void reset_to_98(int *n);
 
-/* 1. Don't swap horses in crossing a stream */
+/* 1-swap.c */
 void swap_int(int *a, int *b);
 
-/* 2. This report, by its very length, defends itself */
+/* 2-strlen.c */
 int _strlen(char *s);
 
-/* 3. I do not fear computers. I fear the lack of them */
+/* 3-puts.c */
 void _puts(char *str);
 
-/* 4. I can only go one way. I've not got a reverse gear */
+/* 4-print_rev.c */
 void print_rev(char *s);
 
-/* 5. A good engineer thinks in reverse */
+/* 5-rev_string.c */
 void rev_string(char *s);
 
-/* 6. Half the lies they tell about me aren't true */
+/* 6-puts2.c */
 void puts2(char *str);
 
-/* 7. Winning is only half of it. Having fun is the other half */
+/* 7-puts_half.c */
 void puts_half(char *str);
 
-/* 8. Arrays are not pointers */
+/* 8-print_array.c */
 void print_array(int *a, int n);
 
-/* 9. strcpy */
+/* 9-strcpy.c */
 char *_strcpy(char *dest, char *src);
 
-/* 10. Great leaders are willing to sacrifice the numbers */
+/* 100-atoi.c */
 int _atoi(char *s);
 
-/* 101. Numbers have life; they're not just symbols on paper */
-void print_number(int n);
-
-/* _putchar function used in many tasks */
+/* _putchar.c */
 int _putchar(char c);
 
 #endif /* MAIN_H */
