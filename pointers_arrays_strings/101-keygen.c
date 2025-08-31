@@ -3,45 +3,30 @@
 #include <time.h>
 
 /**
- * main - Generates a random valid password for 101-crackme
+ * main - generates a random valid password for 101-crackme
  *
  * Return: Always 0
  */
 int main(void)
 {
-	int i;
-	int sum = 0;
-	int target_sum = 2772; /* Assumed target sum for 101-crackme */
-	int len = 15; /* Arbitrary length, adjustable */
-	char password[16]; /* Buffer for password + null terminator */
-	int tmp;
+    int i, sum = 0, n;
+    char password[100]; /* Array to hold the generated password */
 
-	/* Seed random number generator */
-	srand(time(NULL));
+    srand(time(NULL));
 
-	/* Generate random characters until close to target sum */
-	for (i = 0; i < len - 1; i++)
-	{
-		password[i] = 33 + (rand() % 94); /* Printable ASCII: 33 to 126 */
-		sum += password[i];
-	}
+    /* Generate random characters until sum reaches 2772 */
+    for (i = 0; sum < 2772 - 122; i++)
+    {
+        n = 33 + rand() % 94; /* Printable ASCII characters (33 to 126) */
+        password[i] = n;
+        sum += n;
+    }
 
-	/* Adjust last character to meet target sum */
-	tmp = target_sum - sum;
-	if (tmp >= 33 && tmp <= 126)
-	{
-		password[i] = tmp;
-	}
-	else
-	{
-		/* If last char is out of range, adjust earlier char */
-		password[i - 1] -= (tmp - 126);
-		password[i] = 126; /* Use max ASCII value */
-	}
-	password[len] = '\0';
+    /* Fill the last character to reach exact sum 2772 */
+    password[i] = 2772 - sum;
+    password[i + 1] = '\0'; /* Null-terminate the string */
 
-	/* Print the password */
-	printf("%s", password);
+    printf("%s", password);
 
-	return (0);
+    return (0);
 }
