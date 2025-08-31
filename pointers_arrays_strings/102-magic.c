@@ -5,7 +5,7 @@ int main(void)
   int a[5];
   int *p;
   a[2] = 1024;
-  p = a; /* Adjusted to point to a, as p = &n doesn’t allow accessing a[2] */
+  p = a;
   /*
    * write your line of code here...
    * Remember:
@@ -14,7 +14,7 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  *(p + 2) = 98; /* Line 19: Sets a[2] to 98 */
+  *(p + 2) = 98; /* Sets the third element to 98 */
   ;
   printf("a[2] = %d\n", a[2]);
   return (0);
