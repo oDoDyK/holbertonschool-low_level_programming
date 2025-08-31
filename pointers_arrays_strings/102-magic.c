@@ -5,6 +5,7 @@
  *
  * Description: Program to demonstrate pointer arithmetic
  *              Sets a[2] to 98 using a pointer
+ *              Without using variable a in the assignment
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -14,7 +15,7 @@ int main(void)
 
     p = a;
 
-    /* Set a[2] to 98 without using variable a */
+    /* Magic happens here */
     
     *(p + 2) = 98;
 
