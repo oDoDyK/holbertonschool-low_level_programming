@@ -3,9 +3,8 @@
 /**
  * main - Entry point
  *
- * Description: Program to demonstrate pointer arithmetic
- *              Sets a[2] to 98 using a pointer
- *              Without using variable a in the assignment
+ * Description: Sets a[2] to 98 using pointer arithmetic
+ * Author: Student
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -15,11 +14,9 @@ int main(void)
 
     p = a;
 
-    /* Magic happens here */
-    
+    /* Add code below this line */
     *(p + 2) = 98;
 
     printf("a[2] = %d\n", a[2]);
-    
     return (0);
 }
