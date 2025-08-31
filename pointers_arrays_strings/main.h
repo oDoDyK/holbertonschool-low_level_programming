@@ -57,8 +57,20 @@ char *cap_string(char *str);
 /* 7-leet.c */
 char *leet(char *str);
 
+/* 8-rot13.c */
+char *rot13(char *str);
+
 /* 100-atoi.c */
 int _atoi(char *s);
+
+/* 101-print_number.c */
+void print_number(int n);
+
+/* 103-infinite_add.c */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+/* 104-print_buffer.c */
+void print_buffer(char *b, int size);
 
 /* _putchar.c */
 int _putchar(char c);
