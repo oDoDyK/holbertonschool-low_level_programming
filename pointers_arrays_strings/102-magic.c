@@ -8,16 +8,12 @@
  */
 int main(void)
 {
-    int a[5];
+    int a[5] = {0, 1, 98, 3, 4};
+    int *p;
 
-    a[0] = 0;
-    a[1] = 1;
-    a[2] = 98;
-    a[3] = 3;
-    a[4] = 4;
+    p = a;
 
-    /* Print a[2] = 98 without using a comma or modifying p */
-    printf("a[2] = %d\n", a[2]);
+    printf("a[2] = %d\n", *(p + 2));
 
     return (0);
 }
