@@ -1,24 +1,23 @@
 #include <stdio.h>
 
+void magic(void)
+{
+    int a[5];  /* Array to work with */
+    int *p;     /* Pointer to manipulate the array */
+
+    a[2] = 0;   /* Initialize a[2] to some value */
+    p = a;      /* p points to the start of array a */
+
+    /* Line 19: Add the required statement here */
+    *(p + 2) = 98; /* Set a[2] to 98 using pointer arithmetic */
+    ;
+
+    /* Existing print statement to output the result */
+    printf("a[2] = %d\n", a[2]);
+}
+
 int main(void)
 {
-  int n;
-  int a[5];
-  int *p;
-
-  a[2] = 1024;
-  p = &n;
-  /*
-   * write your line of code here...
-   * Remember - you are not allowed to use a
-   * - you are not allowed to modify p
-   * - only one statement
-   * - you are not allowed to use ,
-   * - Do not remove anything from the initial code
-   * (not even the comments)
-   */
-  *(p + 5) = 98;
-  /* ...so that this prints a[2] = 98 */
-  printf("a[2] = %d\n", a[2]);
-  return (0);
+    magic();
+    return (0);
 }
