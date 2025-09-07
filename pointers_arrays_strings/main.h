@@ -69,6 +69,9 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 /* 2-strchr */
 char *_strchr(char *s, char c);
 
+/* 3-strspn.c */
+unsigned int _strspn(char *s, char *accept);
+
 /* 100-atoi.c */
 int _atoi(char *s);
 
