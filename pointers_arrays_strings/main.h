@@ -75,6 +75,9 @@ unsigned int _strspn(char *s, char *accept);
 /* 4-strpbrk.c */
 char *_strpbrk(char *s, char *accept);
 
+/* 5-strstr.c */
+char *_strstr(char *haystack, char *needle);
+
 /* 100-atoi.c */
 int _atoi(char *s);
 
