@@ -2,19 +2,49 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: address of memory to print
+ * @size: size of memory to print
  *
- * Return: Always 0.
+ * Return: Nothing
+ */
+void simple_print_buffer(char *buffer, unsigned int size)
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (i % 10)
+			printf(" ");
+		if (!(i % 10) && i)
+			printf("\n");
+		printf("0x%02x", buffer[i]);
+		i++;
+	}
+	printf("\n");
+}
+
+/**
+ * main - check the code for _memcpy
+ *
+ * Return: Always 0
  */
 int main(void)
 {
-    int a;
-    int b;
+	char buffer[98] = {0};
+	char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
-    a = 98;
-    b = 42;
-    printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
-    printf("a=%d, b=%d\n", a, b);
-    return (0);
+	/* Print buffer before _memcpy */
+	simple_print_buffer(buffer, 98);
+
+	/* Copy 10 bytes from buffer2 to buffer starting at position 50 */
+	_memcpy(buffer + 50, buffer2, 10);
+
+	printf("-------------------------------------------------\n");
+
+	/* Print buffer after _memcpy */
+	simple_print_buffer(buffer, 98);
+
+	return (0);
 }
