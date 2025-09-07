@@ -60,6 +60,9 @@ char *leet(char *str);
 /* 8-rot13.c */
 char *rot13(char *str);
 
+/* 0-memset.c */
+char *_memset(char *s, char b, unsigned int n);
+
 /* 100-atoi.c */
 int _atoi(char *s);
 
