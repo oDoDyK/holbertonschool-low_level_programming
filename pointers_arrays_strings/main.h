@@ -81,6 +81,9 @@ char *_strstr(char *haystack, char *needle);
 /* 7-print_chessboard.c */
 void print_chessboard(char (*a)[8]);
 
+/* 8-print_diagsums.c */
+void print_diagsums(int *a, int size);
+
 /* 100-atoi.c */
 int _atoi(char *s);
 
