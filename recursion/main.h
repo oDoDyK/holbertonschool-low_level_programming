@@ -36,4 +36,7 @@ void set_string(char **s, char *to);
 
 int wildcmp(char *s1, char *s2);
 
+/* 101-wildcmp.c */
+int wildcmp(char *s1, char *s2);
+
 #endif
