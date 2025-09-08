@@ -27,4 +27,13 @@ int _sqrt_recursion(int n);
 /* 6-is_prime_number.c */
 int is_prime_number(int n);
 
+/* 100-is_palindrome.c */
+int is_palindrome(char *s);
+int _check_palindrome(char *s, int start, int end);
+int _strlen_recursion(char *s);
+
+void set_string(char **s, char *to);
+
+int wildcmp(char *s1, char *s2);
+
 #endif
