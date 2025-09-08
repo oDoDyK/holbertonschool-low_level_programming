@@ -12,4 +12,7 @@ void _puts_recursion(char *s);
 /* 1-print_rev_recursion.c */
 void _print_rev_recursion(char *s);
 
+/* 2-strlen_recursion.c */
+int _strlen_recursion(char *s);
+
 #endif
