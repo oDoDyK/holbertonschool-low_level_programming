@@ -46,7 +46,8 @@ strTemp[i] = s1[i];
 }
 for (j = 0; j < counter2; j++)
 {
-strTemp[i] = s2[j];
+strTemp[i + j] = s2[j];
 }
+strTemp[i + j] = '\0';
 return (strTemp);
 }
