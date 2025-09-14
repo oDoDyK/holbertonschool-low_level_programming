@@ -1,5 +1,6 @@
+#include "main.h"
 #include <stdlib.h>
-#include "hoberton.h"
+#include <stdio.h>
 
 /**
  * create_array - Returns a pointer to a newly allocated space in memory.
