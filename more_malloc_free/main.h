@@ -13,4 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 /* 3-array_range.c */
 int *array_range(int min, int max);
 
+/* 100-realloc.c */
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+
 #endif /* MAIN_H */
