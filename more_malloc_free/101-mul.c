@@ -99,6 +99,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 		errors();
+
 	if (!_isdigit(argv[1]) || !_isdigit(argv[2]))
 		errors();
 
