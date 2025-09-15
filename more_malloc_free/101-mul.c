@@ -25,9 +25,9 @@ int _isdigit(char *s)
  *
  * Return: length of string
  */
-size_t _strlen(char *s)
+int _strlen(char *s)
 {
-	size_t len = 0;
+	int len = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -50,21 +50,22 @@ void errors(void)
  */
 void multiply(char *num1, char *num2)
 {
-	size_t len1 = _strlen(num1);
-	size_t len2 = _strlen(num2);
-	size_t len = len1 + len2;
-	size_t i, j, start = 0;
-	int carry, n1, n2;
-	int *result = calloc(len, sizeof(int));
+	int len1, len2, len, i, j, carry, n1, n2, *result;
+	int start = 0;
 
-	if (!result)
-		errors();
+	len1 = _strlen(num1);
+	len2 = _strlen(num2);
+	len = len1 + len2;
 
-	for (i = len1; i-- > 0;)
+	result = calloc(len, sizeof(int));
+	if (result == NULL)
+		exit(98);
+
+	for (i = len1 - 1; i >= 0; i--)
 	{
 		n1 = num1[i] - '0';
 		carry = 0;
-		for (j = len2; j-- > 0;)
+		for (j = len2 - 1; j >= 0; j--)
 		{
 			n2 = num2[j] - '0';
 			carry += result[i + j + 1] + (n1 * n2);
