@@ -16,4 +16,7 @@ int **alloc_grid(int width, int height);
 /* 4-free_grid.c */
 void free_grid(int **grid, int height);
 
+/* 100-argstostr.c */
+char *argstostr(int ac, char **av);
+
 #endif
