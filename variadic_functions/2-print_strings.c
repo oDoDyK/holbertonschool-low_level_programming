@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
 /**
  * print_strings - Prints strings, followed by a new line.
  * @separator: The string to be printed between strings.
@@ -11,7 +10,7 @@
  * Description: If separator is NULL, it is not printed.
  *              If one of the strings if NULL, (nil) is printed instead.
  */
-void print_strings(const char *seprator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list strings;
 char *str;
@@ -28,8 +27,8 @@ printf("(nil)");
 else
 printf("%s", str);
 
-if (index != (n - 1) && seprator != NULL)
-printf("%s", seprator);
+if (index != (n - 1) && separator != NULL)
+printf("%s", separator);
 }
 
 printf("\n");
