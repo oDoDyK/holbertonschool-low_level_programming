@@ -23,4 +23,7 @@ struct list_s *next;
 /* 0-print_lists.c */
 size_t print_list(const list_t *h);
 
+/* 1-list_len.c */
+size_t list_len(const list_t *h);
+
 #endif
