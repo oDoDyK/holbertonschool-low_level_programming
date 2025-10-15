@@ -33,4 +33,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 /* 3-add_dnodeint_end.c */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 
+/* 4-free_dlistint.c */
+void free_dlistint(dlistint_t *head);
+
 #endif /* LIST_H */
