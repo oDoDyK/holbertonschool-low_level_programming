@@ -30,4 +30,7 @@ size_t dlistint_len(const dlistint_t *h);
 /* 2-add_dnodeint.c */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
+/* 3-add_dnodeint_end.c */
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+
 #endif /* LIST_H */
